@@ -1,25 +1,26 @@
-
-public class Actor 
+public class Actor
 {
-    int id;
-    string name;
-    string title;
-    string weapon;
-    float strength = 15.5f;
-    int level;
 
-    string Talk()
+    public int id;
+    public string name;
+    public string title;
+    public string weapon;
+    public float strength;
+    public int level;
+
+    public string Talk()
     {
         return "대화를 걸었습니다.";
     }
-    
-    string HasWeapon()
+
+    public string HasWeapon()
     {
         return weapon;
     }
 
-    void LevelUp()
+    public void LevelUp()
     {
         level = level + 1;
     }
 }
+

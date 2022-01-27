@@ -43,7 +43,6 @@ public class NewBehaviourScript : MonoBehaviour
         Debug.Log("가지고 있는 아이템");
         Debug.Log(items[0]);
         Debug.Log(items[1]);
-
         items.RemoveAt(0);
 
         // 3. 연산자
@@ -165,8 +164,18 @@ public class NewBehaviourScript : MonoBehaviour
         }
 
         // 7. 클래스
-        Actor player = new Actor();
-        
+        // Actor player = new Actor();
+        Player player = new Player();
+        player.id = 0;
+        player.name = "포도숭이";
+        player.title = "용감한";
+        player.strength = 2.4f;
+        Debug.Log(player.Talk());
+        Debug.Log(player.HasWeapon());
+
+        player.LevelUp();
+        Debug.Log(player.name + "의 레벨은 " + player.level + "입니다.");
+        Debug.Log(player.move());
     }
 
     // 6. 함수
